@@ -42,13 +42,13 @@ function App() {
   }
 
   return (
-    <div className="xl:flex xl:justify-between xl:my-10 xl:mx-16 overflow-x-hidden">
+    <div className="xl:flex xl:justify-between xl:my-12 xl:mx-12 overflow-x-hidden">
       <div
-        className="xl:p-16 xl:w-[60%] xl:h-[100%] border-[1px] xl:border-r-0 border-black 
+        className="xl:py-20 xl:w-[60%] xl:h-[100%] border-[1px] xl:border-r-0 border-black 
         flex justify-center items-center rounded-tr-lg xl:rounded-tr-none rounded-tl-lg xl:rounded-bl-lg"
       >
         <div
-          className="xl:w-[25rem] xl:h-[25rem] animate-spin "
+          className="xl:w-[24rem] xl:h-[24rem] animate-spin "
           style={{ animation: `spin ${chastota}s linear infinite` }}
         >
           <img src="https://pngimg.com/uploads/spinner/spinner_PNG56.png" alt="spinner" 
@@ -59,12 +59,12 @@ function App() {
       <div className="xl:w-[40%] xl:h-full bg-blue-50 border-[1px] border-black text-center 
       xl:rounded-tr-lg rounded-br-lg pb-12">
         <div className="border-b-[1px] border-black">
-          <div className="py-8 text-left pl-12">
+          <div className="py-[2.21rem] text-left pl-12">
             <label htmlFor="davr">Vaqt</label>
             <input
               type="number"
               id="davr"
-              className="ml-[4.5rem] pl-4 rounded-sm right w-32"
+              className="ml-[4.5rem] pl-4 rounded-sm right w-28"
               onChange={handleChangeVaqt}
               required
             /> sekund
@@ -73,7 +73,7 @@ function App() {
             <input
               type="number"
               id="radius"
-              className="ml-[3.4rem] pl-4 rounded-sm w-32"
+              className="ml-[3.4rem] pl-4 rounded-sm w-28"
               onChange={handleChangeRadius}
               required
             /> sm
@@ -82,7 +82,7 @@ function App() {
             <input
               type="number"
               id="aylson"
-              className="ml-[1.4rem] pl-4 rounded-sm w-32"
+              className="ml-[1.4rem] pl-4 rounded-sm w-28"
               // onChange={handleChangeAylson}
               required
             /> ta
@@ -91,7 +91,7 @@ function App() {
             <input
               type="number"
               id="tezlik"
-              className="ml-[3.9rem] pl-4 rounded-sm w-32"
+              className="ml-[3.9rem] pl-4 rounded-sm w-28"
               onChange={handleChangeTezlik}
               required
             /> N
@@ -108,16 +108,16 @@ function App() {
           </div>
         </div>
         
-        <div className="text-left pl-12 pb-[0.45rem]">
-          <div className="mt-8">
-            Davr: <span className="pl-[5.65rem]">{davr} sekund.</span>
+        <div className="text-left pl-12 ">
+          <div className="pt-[3rem]">
+            Davr: <span className="pl-[5.6rem]">{davr} sekund.</span>
           </div>
           <div className="mt-4">
             Chastota: <span className="pl-[3.6rem]">{chastota} Hz.</span>
           </div>
           <div className="mt-4">
             O'rtacha tezlik:{" "}
-            <span className="pl-[1.3rem]">{orttezlik} m/s.</span>
+            <span className="pl-[1.2rem]">{orttezlik} m/s.</span>
           </div>
           <div className="mt-4">
             Burchak tezlik:{" "}
