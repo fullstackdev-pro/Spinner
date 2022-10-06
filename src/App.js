@@ -3,13 +3,13 @@ import { useState } from "react";
 function App() {
   const [vaqt, setVaqt] = useState(0);
   const [radius, setRadius] = useState(0);
-  // const [aylson, setAylson] = useState(0);
   const [tezlik, setTezlik] = useState(0);
 
   const [davr, setDavr] = useState(0);
   const [chastota, setChastota] = useState(0);
   const [orttezlik, setOrttezlik] = useState(0);
   const [burtezlik, setBurtezlik] = useState(0);
+  const [ayltezlik, setAyltezlik] = useState(0);
 
   const handleChangeVaqt = (event) => {
     setVaqt(event.target.value);
@@ -18,10 +18,6 @@ function App() {
   const handleChangeRadius = (event) => {
     setRadius(event.target.value);
   };
-
-  // const handleChangeAylson = (event) => {
-  //   setAylson(event.target.value);
-  // };
 
   const handleChangeTezlik = (event) => {
     setTezlik(event.target.value);
@@ -42,11 +38,12 @@ function App() {
   }
 
   return (
-    <div className="xl:flex xl:justify-between xl:my-12 xl:mx-12 overflow-x-hidden">
+    <div className="xl:flex xl:justify-between xl:my-12 xl:mx-12 overflow-x-hidden ">
       <div
-        className="xl:py-20 xl:w-[60%] xl:h-[100%] border-[1px] xl:border-r-0 border-black 
+        className="xl:py-20 xl:w-[60%] xl:h-[100%] border-[1px] xl:border-r-0 border-black relative
         flex justify-center items-center rounded-tr-lg xl:rounded-tr-none rounded-tl-lg xl:rounded-bl-lg"
       >
+        <div className="absolute text-xl bottom-4 right-4 xl:bottom-8 xl:right-8">time</div>
         <div
           className="xl:w-[24rem] xl:h-[24rem] animate-spin "
           style={{ animation: `spin ${chastota}s linear infinite` }}
@@ -78,23 +75,14 @@ function App() {
               required
             /> sm
             <br /> <br />
-            <label htmlFor="aylson">Aylana soni </label>
-            <input
-              type="number"
-              id="aylson"
-              className="ml-[1.4rem] pl-4 rounded-sm w-28"
-              // onChange={handleChangeAylson}
-              required
-            /> ta
-            <br /> <br />
-            <label htmlFor="tezlik">Tezlik </label>
+            <label htmlFor="tezlik">Tezlik, N</label>
             <input
               type="number"
               id="tezlik"
-              className="ml-[3.9rem] pl-4 rounded-sm w-28"
+              className="ml-[2.75rem] pl-4 rounded-sm w-28"
               onChange={handleChangeTezlik}
               required
-            /> N
+            />
             <br />
             <br />
             <button
@@ -109,8 +97,8 @@ function App() {
         </div>
         
         <div className="text-left pl-12 ">
-          <div className="pt-[3rem]">
-            Davr: <span className="pl-[5.6rem]">{davr} sekund.</span>
+          <div className="pt-[3.5rem]">
+            Davr: <span className="pl-[5.5rem]">{davr} sekund.</span>
           </div>
           <div className="mt-4">
             Chastota: <span className="pl-[3.6rem]">{chastota} Hz.</span>
@@ -122,6 +110,10 @@ function App() {
           <div className="mt-4">
             Burchak tezlik:{" "}
             <span className="pl-[1.4rem]">{burtezlik} rad/s.</span>
+          </div>
+          <div className="mt-4">
+            Aylana tezlik:{" "}
+            <span className="pl-[2rem]">{ayltezlik} rad/s.</span>
           </div>
         </div>
       </div>
