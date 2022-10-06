@@ -113,7 +113,7 @@ function App() {
           </div>
           <div className="mt-4">
             Aylana tezlik:{" "}
-            <span className="pl-[2rem]">{ayltezlik} rad/s.</span>
+            <span className="pl-[2rem]">{ayltezlik} m/s.</span>
           </div>
         </div>
       </div>
