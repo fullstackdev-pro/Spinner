@@ -24,8 +24,8 @@ function App() {
   };
 
   function Started() {
-    if(!vaqt && !tezlik) {
-      return 
+    if (!vaqt && !tezlik) {
+      return;
     }
     let T = vaqt / tezlik;
     setDavr(T);
@@ -43,18 +43,25 @@ function App() {
         className="xl:py-20 xl:w-[60%] xl:h-[100%] border-[1px] xl:border-r-0 border-black relative
         flex justify-center items-center rounded-tr-lg xl:rounded-tr-none rounded-tl-lg xl:rounded-bl-lg"
       >
-        <div className="absolute text-xl bottom-4 right-4 xl:bottom-8 xl:right-8">time</div>
+        <div className="absolute text-xl bottom-4 right-4 xl:bottom-8 xl:right-8">
+          time
+        </div>
         <div
           className="xl:w-[24rem] xl:h-[24rem] animate-spin "
           style={{ animation: `spin ${chastota}s linear infinite` }}
         >
-          <img src="https://pngimg.com/uploads/spinner/spinner_PNG56.png" alt="spinner" 
-          className="w-full h-full "/>
+          <img
+            src="https://pngimg.com/uploads/spinner/spinner_PNG56.png"
+            alt="spinner"
+            className="w-full h-full "
+          />
         </div>
       </div>
 
-      <div className="xl:w-[40%] xl:h-full bg-blue-50 border-[1px] border-black text-center 
-      xl:rounded-tr-lg rounded-br-lg pb-12">
+      <div
+        className="xl:w-[40%] xl:h-full bg-blue-50 border-[1px] border-black text-center 
+      xl:rounded-tr-lg rounded-br-lg pb-12"
+      >
         <div className="border-b-[1px] border-black">
           <div className="py-[2.21rem] text-left pl-12">
             <label htmlFor="davr">Vaqt</label>
@@ -64,7 +71,8 @@ function App() {
               className="ml-[4.5rem] pl-4 rounded-sm right w-28"
               onChange={handleChangeVaqt}
               required
-            /> sekund
+            />{" "}
+            sekund
             <br /> <br />
             <label htmlFor="radius">Radius </label>
             <input
@@ -73,7 +81,8 @@ function App() {
               className="ml-[3.4rem] pl-4 rounded-sm w-28"
               onChange={handleChangeRadius}
               required
-            /> sm
+            />{" "}
+            sm
             <br /> <br />
             <label htmlFor="tezlik">Tezlik, N</label>
             <input
@@ -86,6 +95,7 @@ function App() {
             <br />
             <br />
             <button
+              type="submit"
               className="border-2 py-1 px-12 ml-[6.3rem] rounded-lg text-white text-xl bg-green-400"
               onClick={() => {
                 Started();
@@ -95,7 +105,7 @@ function App() {
             </button>
           </div>
         </div>
-        
+
         <div className="text-left pl-12 ">
           <div className="pt-[3.5rem]">
             Davr: <span className="pl-[5.5rem]">{davr} sekund.</span>
@@ -112,8 +122,7 @@ function App() {
             <span className="pl-[1.4rem]">{burtezlik} rad/s.</span>
           </div>
           <div className="mt-4">
-            Aylana tezlik:{" "}
-            <span className="pl-[2rem]">{ayltezlik} m/s.</span>
+            Aylana tezlik: <span className="pl-[2rem]">{ayltezlik} m/s.</span>
           </div>
         </div>
       </div>
