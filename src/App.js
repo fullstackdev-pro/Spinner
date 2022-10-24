@@ -16,7 +16,7 @@ function App() {
   const counterRef = useRef(null);
 
   const handleChangeVaqt = (event) => {
-    if (event.target.value < 0) {
+    if (event.target.value < 0.1) {
       notify("Vaqt");
     } else {
       setVaqt(event.target.value);
@@ -33,7 +33,7 @@ function App() {
   };
 
   const handleChangeTezlik = (event) => {
-    if (event.target.value < 0.1) {
+    if (event.target.value < 0) {
       notify("Tezlik");
     } else {
       setTezlik(event.target.value);
